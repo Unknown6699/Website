@@ -1,0 +1,76 @@
+
+#block_menu {
+    border-radius: 30px;
+    background: linear-gradient(to bottom, #3125a4 0%, #6159b6 95%);
+    width: 60%;
+    height: 600px;
+    margin: 6% auto;
+    padding: 1%;
+    overflow: hidden;
+    display: none;
+    box-shadow: 0px 0px 10px #3125a4;
+    animation: block_menu_anim 1s ease 1 normal running 0s forwards;
+}
+
+@keyframes block_menu_anim {
+    0% {transform: scale(0.5);}
+    35% {transform: scale(1.2);}
+    100% {transform: scale(1);}}
+
+#h1, .p1 {color: #ffffff;}
+#h1 {text-align: center;}
+
+.img1 {border-radius: 10px; width: 20%; float: left; margin-right: 5px;}
+.img2 {border-radius: 10px; width: 30%; float: left; margin-right: 30px;}
+
+.block_p {animation: block_p_anim 1s ease 1 normal running 0s forwards;}
+@keyframes block_p_anim {0% {opacity: 0;} 100% {opacity: 1;}}
+.block_p:nth-child(2) {display: block; margin-top: 8%;}
+.block_p:nth-child(3) {display: none; font-size: 130%;}
+.block_p:nth-child(4) {display: none; font-size: 130%;}
+
+.block_p:nth-child(2) > .p1 {font-size: 150%;}
+.block_p:nth-child(3) > ul {color: #ffffff;}
+.block_p:nth-child(4) > ul {color: #ffffff; font-size: 80%;}
+
+#button1 {
+    border-radius: 30px;
+    background-color: #d86613;
+    width: 130px;
+    height: 45px;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    box-shadow: 1px 1px 2px black;
+    transition: 0.1s;
+}
+
+#close {display: inline-block;}
+#button1:active {background-color: orangered; right: 14px; bottom: 14px; box-shadow: 0px 0px 0px black;}
+#button1:hover > #close {transition: 1s; transform: rotate(180deg);}
+#button1::selection, #close::selection {background: transparent;}
+
+#help1 {
+    border-left: 3px solid #d86613;
+    border-right: 3px solid #d86613;
+    width: 0px;
+    height: 30px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 28px;
+    color: yellow;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    right: 155px;
+    bottom: 23px;
+    transition: 1s;
+    display: none;
+}
+
+#help1::selection {background: transparent;}
